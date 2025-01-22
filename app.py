@@ -16,8 +16,8 @@ app = Flask(__name__)
 # 初始化 Flask app 和 SQLAlchemy
 app = Flask(__name__)
 
-DATABASE_URL_KEY ="mysql+pymysql://w7mk68raqyzn3jq8:am5v8is8jul1raii@qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/l2knelx1hjmnx6t2"
-engine = create_engine("mysql+pymysql://w7mk68raqyzn3jq8:am5v8is8jul1raii@qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/l2knelx1hjmnx6t2")
+DATABASE_URL_KEY =""
+engine = create_engine("")
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL_KEY
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -51,8 +51,8 @@ class CoffeeNation(db.Model):
 
 ###-------------------------------------------------------------------------------------
 # Channel access token 和 Channel secret環境變數設置----------------------------
-line_bot_api = LineBotApi('W2XBsJoKnPCmiRxFAx/BhVSHmh0ZB0yiUdHFYEOM7P6udzUtFe0t/qYk3FGmajVBA4jmHZ6IdYRU+4A8QjY61xJo0ClOM+3azYw75dMijYLocHnDqrXiEcYPfZ5xuZXU21H/b72Vtf56zXubJQ6czgdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('2f16c9e9e753cd0381f77b2d87dd88f9')
+line_bot_api = LineBotApi()
+handler = WebhookHandler()
 
 
 ###-------------------------------------------------------------------------------------
